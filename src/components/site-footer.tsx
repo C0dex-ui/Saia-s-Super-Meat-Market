@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="ld-foot">
       <div className="ld-wrap ld-foot-grid">
         <div>
-          <a href="/" className="ld-logo" aria-label="Saia's Super Meat Market">
+          <a href="/#top" className="ld-logo" aria-label="Saia's Super Meat Market">
             <img src="/saias/logo.jpg" alt="" width={56} height={56} />
             <span className="ld-logo-text">
               <b>Saia's</b>
@@ -33,7 +33,7 @@ export function SiteFooter() {
           <ul>
             {MENU.slice(0, 5).map((s) => (
               <li key={s.slug}>
-                <a href={s.slug === "chicken" ? "/chicken-king" : "/#kitchen"}>{s.name}</a>
+                <a href={s.slug === "chicken" ? "/#chicken" : "/#kitchen"}>{s.name}</a>
               </li>
             ))}
           </ul>
@@ -47,7 +47,7 @@ export function SiteFooter() {
             <Phone className="size-4" weight="fill" /> {NAP.phone}
           </p>
           <p>{HOURS_SHORT}.</p>
-          <p>Facebook: proudly serving the Northshore since 1977.</p>
+          <p>Proudly serving the Northshore since 1977.</p>
           <p className="ld-foot-social">
             {SOCIAL.map((s) => (
               <a key={s.href} href={s.href} rel="noreferrer" target="_blank">
@@ -57,11 +57,9 @@ export function SiteFooter() {
           </p>
         </div>
       </div>
-      <div className="ld-wrap ld-copy">
-        © {new Date().getFullYear()} {SITE_LEGAL}.{" "}
-        <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a>
-        {" · "}
-        {SITE_NAME}
+      <div className="ld-wrap ld-copy" id="legal">
+        © {new Date().getFullYear()} {SITE_LEGAL}. The callback form stores nothing on a server. Do not send card
+        numbers. Call {NAP.phone}. {SITE_NAME}
       </div>
     </footer>
   );

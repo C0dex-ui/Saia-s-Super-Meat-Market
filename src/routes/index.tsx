@@ -97,17 +97,15 @@ function Intro() {
           <p className="ld-kicker">Mandeville since 1977</p>
           <h2>Butcher. Deli. Wine. One Florida Street floor.</h2>
           <p>
-            Visit the Northshore lists {SITE_NAME} as a Northshore staple since 1977: old-school neighborhood grocery
-            with a full-service deli, butcher counter, and hot food kitchen. Family-owned. {NAP.street}, {NAP.city},{" "}
-            {NAP.region} {NAP.postal}.
+            {SITE_NAME} has been a Northshore staple since 1977: neighborhood grocery, full-service deli, butcher
+            counter, and hot food kitchen. Family-owned. {NAP.street}, {NAP.city}, {NAP.region} {NAP.postal}.
           </p>
           <p>
-            Instagram: “Old Tyme meat market with the BEST wine and spirits selection in Mandeville! World Famous Fried
-            Chicken and Po-Boys!” Facebook: fine meats, hand-crafted sausages, fresh ground beef never frozen.
+            Old-tyme meat market with a serious wine and spirits wall. Fine meats, hand-crafted sausages, fresh ground
+            beef never frozen, world-famous fried chicken, and po-boys.
           </p>
           <p>
-            The shop sits at {NAP.street}, {NAP.city}. Facebook and Instagram posts print {NAP.phone}. Superpages lists
-            the same main number. Yelp still lists {NAP.phoneAlt}. Call the number on the shop’s own posts.
+            Call the counter at {NAP.phone}.
           </p>
           <ul className="sm-facts">
             {FACTS.map((f) => (
@@ -141,8 +139,8 @@ function King() {
           <h2>{CHICKEN_KING.name}. {CHICKEN_KING.price}.</h2>
           <p className="sm-king-price">{CHICKEN_KING.price}</p>
           <p>
-            Instagram: “Chicken King Special Tuesday.” {CHICKEN_KING.items}. {CHICKEN_KING.who} is named as the Chicken
-            King. Facebook repeats the same $24.99 box. Call {NAP.phone} to hold an order.
+            Every Tuesday, {CHICKEN_KING.who} puts up the Chicken King Special: {CHICKEN_KING.items}, all for{" "}
+            {CHICKEN_KING.price}. Call {NAP.phone} to hold a box.
           </p>
           <ul>
             <li>8 pieces mixed or dark fried chicken</li>
@@ -151,8 +149,8 @@ function King() {
             <li>Small onion rings</li>
           </ul>
           <div className="ld-actions">
-            <a className="ld-btn" href="/chicken-king">
-              Chicken King page
+            <a className="ld-btn" href="/#book">
+              Chicken King box
             </a>
             <a className="ld-btn" href={NAP.phoneHref}>
               Call for a box
@@ -181,9 +179,9 @@ function Butcher() {
           <p className="ld-kicker">Three counters</p>
           <h2>What the meat market in Mandeville actually sells.</h2>
           <p>
-            Facebook names the standing board: famous fried chicken, homemade chicken salad, homemade sausage, fresh-cut
-            chuck roasts, steaks. Tourism copy adds seafood dinners, boudin, crawfish pies, hushpuppies, and family-size
-            chicken boxes. This page does not invent a price list beyond the Tuesday $24.99 box the shop publishes.
+            Three counters on one Florida Street floor: the butcher, the hot kitchen, and wine & spirits. Famous fried
+            chicken, homemade chicken salad, homemade sausage, chuck roasts, steaks, po-boys. Seafood dinners, boudin,
+            crawfish pies, hushpuppies, and family-size chicken boxes too. The published Tuesday price is {CHICKEN_KING.price}.
           </p>
         </div>
         <div className="sm-depts">
@@ -219,16 +217,14 @@ function Kitchen() {
           <p className="ld-kicker">Hot kitchen</p>
           <h2>Fried chicken, po-boys, chicken salad.</h2>
           <p>
-            Facebook lunch posts: fried chicken, homemade chicken salad, po-boys. TripAdvisor (Saia's Deli, 33 reviews,
-            4.3) calls it part butcher, part liquor store, part takeout, and names shrimp, roast beef, catfish, and smoked
-            sausage po-boys plus fried chicken. Yelp reviewers in 2026 still lead with roast beef po-boys and the Chicken
-            King.
+            Lunch off the hot line: fried chicken, homemade chicken salad, po-boys. Roast beef, shrimp, catfish, and
+            smoked sausage on French bread. Tuesday is Chicken King.
           </p>
         </div>
         <ul className="sm-plates">
           {MENU.map((m, i) => (
             <li key={m.slug} data-slide="up" style={{ "--d": `${i * 70}ms` } as CSSProperties}>
-              <a href={m.slug === "chicken" ? "/chicken-king" : "/#book"}>
+              <a href={m.slug === "chicken" ? "/#chicken" : "/#book"}>
                 <span className="sm-shot">
                   <img src={m.img} alt={m.imgAlt} width={960} height={720} loading="lazy" />
                 </span>
@@ -252,20 +248,14 @@ function Cow() {
           <p className="ld-kicker">The cow</p>
           <h2>A dozen feet of fiberglass on Florida Street since 1979.</h2>
           <p>
-            NOLA.com, May–June 2023: the giant fiberglass cow in the Saia's parking lot was rolled to the Mandeville
-            lakefront in a school-year prank and returned the same day. Manager Natalie Lott said the former owner
-            bought it from a defunct steakhouse chain in 1979. Vincent Saia told her the figure is a beef steer. It had
-            been taken once before, years earlier.
+            The giant fiberglass cow has stood in the Saia's lot since 1979. Former owner Vincent Saia bought it from a
+            defunct steakhouse chain. He told manager Natalie Lott the figure is a beef steer — about a dozen feet tall,
+            on a trailer, so Florida Street can still find the shop.
           </p>
           <p>
-            The St. Tammany Parish Sheriff’s Office: “this ain't her first rodeo.” A Facebook group, Saia's Cow
-            Sightings, filled with cut-and-paste photos. A shop post signed “Alan here” thanked Jessie Whiteman for
-            starting the group. The cow once wore a LARGE SHRIMP POBOY 8.99 sign on its belly — a historical price, not
-            a current menu.
-          </p>
-          <p>
-            {SITE_NAME} did not press charges. The statue sits on a trailer in the lot so Florida Street traffic can
-            still find the meat market in Mandeville.
+            In May 2023 students rolled it to the Mandeville lakefront. Police brought it home the same day. The shop
+            did not press charges. It had been taken once before, years earlier. The cow once wore a LARGE SHRIMP POBOY
+            8.99 sign on its belly — a historical price, not today’s menu.
           </p>
         </div>
         <figure className="sm-figure" data-slide="right">
@@ -325,7 +315,7 @@ function Visit() {
               </span>
             </a>
             <div className="sm-hours-board" data-slide="up">
-              <p className="sm-hours-title">Hours · Yelp listing</p>
+              <p className="sm-hours-title">Hours</p>
               <ul className="sm-hours">
                 {HOURS.map((h) => (
                   <li key={h.days}>

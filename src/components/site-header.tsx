@@ -18,7 +18,7 @@ export function SiteHeader({ active }: { active: string }) {
       </div>
       <header className={`ld-head${open ? " is-open" : ""}`}>
         <div className="ld-wrap ld-head-row">
-          <a href="/" className="ld-logo" aria-label="Saia's Super Meat Market" aria-current={active === "Home" ? "page" : undefined} onClick={close}>
+          <a href="/#top" className="ld-logo" aria-label="Saia's Super Meat Market" aria-current={active === "Home" ? "page" : undefined} onClick={close}>
             <img src="/saias/logo.jpg" alt="" width={56} height={56} />
             <span className="ld-logo-text">
               <b>Saia's</b>

@@ -9,16 +9,16 @@ export function InternalLinks() {
           <p className="ld-kicker">The house</p>
           <ul>
             <li>
-              <a href="/mandeville">Meat market in Mandeville</a>
+              <a href="/#butcher">Since 1977</a>
             </li>
             <li>
-              <a href="/about">Since 1977</a>
+              <a href="/#chicken">Chicken King</a>
             </li>
             <li>
               <a href="/#reviews">Yelp notes</a>
             </li>
             <li>
-              <a href="/contact">Call the counter</a>
+              <a href="/#visit">Call the counter</a>
             </li>
           </ul>
         </div>
@@ -27,7 +27,7 @@ export function InternalLinks() {
           <ul>
             {MENU.map((s) => (
               <li key={s.slug}>
-                <a href={s.slug === "chicken" ? "/chicken-king" : "/#kitchen"}>{s.name}</a>
+                <a href={s.slug === "chicken" ? "/#chicken" : "/#kitchen"}>{s.name}</a>
               </li>
             ))}
           </ul>

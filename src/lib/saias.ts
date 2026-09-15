@@ -20,7 +20,7 @@ export const ABOUT_DESCRIPTION =
 
 export const CONTACT_TITLE = "Contact Saia's Super Meat Market | Mandeville butcher";
 export const CONTACT_DESCRIPTION =
-  "Call Saia's Super Meat Market at (985) 626-9724. 2225 Florida Street, Mandeville, LA 70448. Catering, Chicken King, butcher counter. Facebook @SaiasMeatMarket.";
+  "Call Saia's Super Meat Market at (985) 626-9724. 2225 Florida Street, Mandeville, LA 70448. Catering, Chicken King, butcher counter.";
 
 export const NAP = {
   name: SITE_NAME,
@@ -66,12 +66,11 @@ export const YELP_REVIEWS = {
 
 export const NAV = [
   { label: "Butcher", href: "/#butcher" },
-  { label: "Chicken King", href: "/chicken-king" },
+  { label: "Chicken King", href: "/#chicken" },
   { label: "Kitchen", href: "/#kitchen" },
   { label: "The cow", href: "/#cow" },
-  { label: "Mandeville", href: "/mandeville" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Visit", href: "/#visit" },
 ] as const;
 
 export const HOURS = [
@@ -84,9 +83,8 @@ export const HOURS = [
   { days: "Sunday", time: "8:00am – 6:00pm", opens: "08:00", closes: "18:00" },
 ] as const;
 
-export const HOURS_SHORT = "Yelp lists 8am open, most evenings to 7, Wed/Sat/Sun to 6";
-export const HOURS_NOTE =
-  "Hours below are the Yelp table. Apple Maps and TripAdvisor list 8pm close on some days. Facebook does not post hours — call the day you come.";
+export const HOURS_SHORT = "Open 8am daily · most evenings to 7 · Wed, Sat, Sun to 6";
+export const HOURS_NOTE = "Hours can change for holidays and weather. Call the day you come.";
 
 export const AREAS = ["Mandeville"] as const;
 
@@ -104,21 +102,21 @@ export const DEPARTMENTS = [
     name: "Butcher counter",
     img: "/saias/steaks.jpg",
     imgAlt: "Fresh-cut steaks on butcher paper at a meat market in Mandeville",
-    note: "Facebook: fine meats, hand-crafted sausages, fresh ground beef made multiple times a day and never frozen. Instagram names ribeyes and filets. Facebook names chuck roasts and steaks.",
+    note: "Fine meats, ribeyes, filets, chuck roasts, hand-crafted sausages, and fresh ground beef made multiple times a day — never frozen.",
   },
   {
     slug: "kitchen",
     name: "Hot kitchen & deli",
     img: "/saias/chicken.jpg",
     imgAlt: "Famous fried chicken from Saia's Super Meat Market in Mandeville",
-    note: "Famous fried chicken, homemade chicken salad, po-boys, potato logs, onion rings. Visit the Northshore also names seafood dinners, boudin, crawfish pies, hushpuppies.",
+    note: "Famous fried chicken, homemade chicken salad, po-boys, potato logs, and onion rings. Seafood dinners, boudin, crawfish pies, and hushpuppies too.",
   },
   {
     slug: "wine",
     name: "Wine & spirits",
     img: "/saias/wine.jpg",
     imgAlt: "Wine and spirits shelves at Saia's Super Meat Market in Mandeville",
-    note: "Instagram bio: old-tyme meat market with the best wine and spirits selection in Mandeville. Grocery and pantry on the same floor.",
+    note: "An old-tyme meat market with a serious wine and spirits wall, plus grocery and pantry on the same floor.",
   },
 ] as const;
 
@@ -128,42 +126,42 @@ export const MENU = [
     name: "Famous fried chicken",
     img: "/saias/chicken.jpg",
     imgAlt: "Crispy fried chicken from Saia's Super Meat Market",
-    note: "Instagram bio: World Famous Fried Chicken. Facebook posts it as a standing kitchen item. Tuesday Chicken King Special is $24.99.",
+    note: "Hot fried chicken from the kitchen. Tuesdays, the Chicken King Special is $24.99.",
   },
   {
     slug: "poboy",
     name: "Po-boys",
     img: "/saias/poboy.jpg",
     imgAlt: "Roast beef po-boy from a Mandeville meat market",
-    note: "Yelp names roast beef. TripAdvisor names shrimp, roast beef, catfish, and smoked sausage. Instagram: World Famous Fried Chicken and Po-Boys.",
+    note: "Roast beef, shrimp, catfish, and smoked sausage po-boys off the hot line.",
   },
   {
     slug: "salad",
     name: "Homemade chicken salad",
     img: "/saias/salad.jpg",
     imgAlt: "Homemade chicken salad from Saia's Super Meat Market",
-    note: "Facebook posts it as a standing item. Catering lists finger sandwiches. Call for party trays.",
+    note: "Made in-house. Call for party trays and finger sandwiches.",
   },
   {
     slug: "sausage",
     name: "Sausage & ground beef",
     img: "/saias/sausage.jpg",
     imgAlt: "House sausage and fresh ground beef at Saia's butcher counter",
-    note: "Facebook: hand-crafted sausages and fresh ground beef never frozen, ground multiple times a day.",
+    note: "Hand-crafted sausages and fresh ground beef, never frozen, ground multiple times a day.",
   },
   {
     slug: "steaks",
     name: "Steaks & roasts",
     img: "/saias/steaks.jpg",
     imgAlt: "Hand-cut steaks at Saia's Super Meat Market butcher counter",
-    note: "Instagram: ribeyes and filets. Facebook names chuck roasts and steaks.",
+    note: "Ribeyes, filets, chuck roasts, and steaks cut at the counter.",
   },
   {
     slug: "shrimp",
     name: "Shrimp po-boy",
     img: "/saias/shrimp.jpg",
-    imgAlt: "Shrimp po-boy named on Saia's reviews in Mandeville",
-    note: "TripAdvisor names shrimp po-boys. The cow statue once wore a LARGE SHRIMP POBOY sign; that $8.99 price is historical, not current.",
+    imgAlt: "Shrimp po-boy from Saia's Super Meat Market in Mandeville",
+    note: "A Florida Street staple. Call for today’s price — the old $8.99 cow-sign figure is history.",
   },
 ] as const;
 
@@ -201,23 +199,23 @@ export const FAQS = [
   },
   {
     q: "What is the phone number?",
-    a: "Facebook and Instagram posts print (985) 626-9724. Superpages lists the same main number. Yelp and some directories still list (985) 626-3877. This site uses the number the shop prints on its own posts.",
+    a: "(985) 626-9724. That is the number for the butcher counter, kitchen, and catering.",
   },
   {
     q: "What are the hours?",
-    a: "Yelp lists Monday, Tuesday, Thursday, Friday 8am–7pm; Wednesday, Saturday, Sunday 8am–6pm. Apple Maps and TripAdvisor list 8pm close on some weekdays. Facebook does not publish a hours table. Call the day you come.",
+    a: "Monday, Tuesday, Thursday, Friday 8am–7pm. Wednesday, Saturday, Sunday 8am–6pm. Call if you are coming late.",
   },
   {
     q: "What is the Chicken King Special?",
-    a: "Instagram and Facebook: Tuesdays, $24.99 for 8 pieces mixed or dark fried chicken, 2 dinner rolls, large potato logs, and small onion rings. Uncle Willie is named as the Chicken King.",
+    a: "Tuesdays, $24.99 for 8 pieces mixed or dark fried chicken, 2 dinner rolls, large potato logs, and small onion rings. Uncle Willie is the Chicken King. Call to hold a box.",
   },
   {
     q: "Does Saia's take cards?",
-    a: "Superpages lists Amex, cash, check, debit, Discover, Mastercard, and Visa. Apple Maps lists Apple Pay and contactless. Confirm at the register.",
+    a: "Yes — cards and cash at the register. Confirm Apple Pay or a split ticket when you check out.",
   },
   {
     q: "Is there catering?",
-    a: "Facebook asks hosts to call (985) 626-9724 for catering. Finger sandwiches are named on their posts.",
+    a: "Yes. Call (985) 626-9724 for party trays, finger sandwiches, and family-size chicken boxes.",
   },
 ] as const;
 
@@ -231,8 +229,8 @@ export const RESERVE_OPTIONS = [
 ] as const;
 
 export const FACTS = [
-  { k: "1977", v: "Open on the Northshore" },
-  { k: "1979", v: "Cow statue bought" },
+  { k: "1977", v: "Open on Florida Street" },
+  { k: "Family", v: "Owned butcher shop" },
   { k: "$24.99", v: "Tuesday Chicken King" },
   { k: "3.7", v: "Yelp · 72 reviews" },
 ] as const;
