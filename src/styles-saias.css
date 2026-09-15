@@ -279,13 +279,16 @@ html, body { background: var(--sm-paper); color: var(--sm-ink); overflow-x: clip
 .sm-map {
   position: relative;
   display: block;
-  text-decoration: none;
-  color: inherit;
   overflow: hidden;
   background: var(--sm-cow);
   box-shadow: 10px 10px 0 var(--sm-red);
 }
-.sm-map img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.sm-map iframe, .sm-map img {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 0;
+  display: block;
+}
 .sm-map-chip {
   position: absolute;
   left: 0.85rem;
@@ -302,9 +305,10 @@ html, body { background: var(--sm-paper); color: var(--sm-ink); overflow-x: clip
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.85rem;
+  z-index: 2;
+  text-decoration: none;
 }
-.sm-map:hover { transform: translateY(-3px); }
-.sm-map:hover .sm-map-chip { background: var(--sm-red-deep); }
+.sm-map-chip { pointer-events: auto; }
 
 .sm-visit { background: var(--sm-paper); }
 .sm-visit-head {
@@ -439,11 +443,8 @@ html, body { background: var(--sm-paper); color: var(--sm-ink); overflow-x: clip
 .sm-dept.is-tilting,
 .sm-plates a.is-tilting,
 .sm-figure.is-tilting,
-.sm-map.is-tilting,
-.sm-form-card.is-tilting,
 .sm-hours-board.is-tilting,
 .ld-ti-card.is-tilting,
-.ld-faq-item.is-tilting,
 .sm-facts li.is-tilting {
   box-shadow: 14px 18px 0 var(--sm-red);
   z-index: 2;
@@ -451,7 +452,7 @@ html, body { background: var(--sm-paper); color: var(--sm-ink); overflow-x: clip
 .ld-btn.is-tilting, .ld-btn-ghost.is-tilting {
   box-shadow: 6px 8px 0 var(--sm-red-deep);
 }
-.sm-dept, .sm-plates a, .sm-figure, .sm-map {
+.sm-dept, .sm-plates a, .sm-figure {
   position: relative;
 }
 .sm-shot {
@@ -482,7 +483,7 @@ html, body { background: var(--sm-paper); color: var(--sm-ink); overflow-x: clip
 .sm-plates a.is-tilting .sm-promo {
   transform: translate3d(0, 0, 12px);
 }
-.sm-dept::after, .sm-plates a::after, .sm-figure::after, .sm-map::after, .ld-btn::after {
+.sm-dept::after, .sm-plates a::after, .sm-figure::after, .ld-btn::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -491,8 +492,7 @@ html, body { background: var(--sm-paper); color: var(--sm-ink); overflow-x: clip
   opacity: 0;
   transition: opacity 160ms linear;
 }
-.sm-dept.is-tilting::after, .sm-plates a.is-tilting::after, .sm-figure.is-tilting::after,
-.sm-map.is-tilting::after, .ld-btn.is-tilting::after { opacity: 1; }
+.sm-dept.is-tilting::after, .sm-plates a.is-tilting::after, .sm-figure.is-tilting::after, .ld-btn.is-tilting::after { opacity: 1; }
 .ld-btn, .ld-btn-ghost { position: relative; overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -545,7 +545,7 @@ html, body { background: var(--sm-paper); color: var(--sm-ink); overflow-x: clip
   .sm-cow .sm-figure { box-shadow: 6px 6px 0 var(--sm-gold); }
   .sm-map { box-shadow: 6px 6px 0 var(--sm-red); }
   .sm-form-card { box-shadow: 6px 6px 0 var(--sm-red); padding: 1.15rem 1rem 1.25rem; }
-  .sm-map img { aspect-ratio: 4 / 3; }
+  .sm-map iframe, .sm-map img { aspect-ratio: 4 / 3; }
   .sm-map-chip { left: 0.6rem; right: 0.6rem; bottom: 0.6rem; font-size: 0.75rem; letter-spacing: 0.04em; }
   .sm-facts b { font-size: 1.35rem; }
   .sm-dept:hover, .sm-plates a:hover { box-shadow: 6px 8px 0 var(--sm-red); }

@@ -18,6 +18,7 @@ import {
   MAPS_HREF,
   MENU,
   NAP,
+  OSM_EMBED,
   SITE_NAME,
 } from "@/lib/saias";
 
@@ -301,19 +302,18 @@ function Visit() {
 
         <div className="sm-visit-grid">
           <div className="sm-visit-place">
-            <a className="sm-map" href={MAPS_HREF} rel="noreferrer" target="_blank" data-slide="left">
-              <img
-                src="/saias/map.jpg"
-                alt="OpenStreetMap of Saia's Super Meat Market on Florida Street in Mandeville"
-                width={768}
-                height={768}
+            <div className="sm-map" data-slide="left">
+              <iframe
+                title="Map of Saia's Super Meat Market at 2225 Florida Street, Mandeville"
+                src={OSM_EMBED}
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
-              <span className="sm-map-chip">
+              <a className="sm-map-chip" href={MAPS_HREF} rel="noreferrer" target="_blank">
                 <MapPin className="size-4" weight="fill" />
                 {NAP.street} · Directions
-              </span>
-            </a>
+              </a>
+            </div>
             <div className="sm-hours-board" data-slide="up">
               <p className="sm-hours-title">Hours</p>
               <ul className="sm-hours">

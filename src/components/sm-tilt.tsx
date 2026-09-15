@@ -2,7 +2,7 @@ import { useLayoutEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 
 const CARDS =
-  ".sm-dept, .sm-plates a, .sm-figure, .sm-map, .sm-form-card, .sm-hours-board, .ld-ti-card, .ld-faq-item, .sm-facts li";
+  ".sm-dept, .sm-plates a, .sm-figure, .sm-hours-board, .ld-ti-card, .sm-facts li";
 const BUTTONS = ".ld-btn, .ld-btn-ghost, .ld-sticky a";
 const CHIPS = ".ld-logo, .ld-y-badge, .ld-nav a, .ld-head .ld-btn";
 
@@ -19,7 +19,9 @@ export function TiltMount() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (window.matchMedia("(pointer: coarse)").matches) return;
 
-    const nodes = Array.from(document.querySelectorAll<HTMLElement>(`${CARDS}, ${BUTTONS}, ${CHIPS}`));
+    const nodes = Array.from(document.querySelectorAll<HTMLElement>(`${CARDS}, ${BUTTONS}, ${CHIPS}`)).filter(
+      (el) => !el.closest(".sm-map, .sm-form-card, .ld-faq-item, .sm-visit-faq"),
+    );
     const clean: Array<() => void> = [];
 
     for (const el of nodes) {

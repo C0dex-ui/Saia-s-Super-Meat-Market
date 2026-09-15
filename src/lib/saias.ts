@@ -32,14 +32,16 @@ export const NAP = {
   phoneHref: "tel:+19856269724",
   phoneE164: "+19856269724",
   phoneAlt: "(985) 626-3877",
-  lat: 30.3658348,
-  lng: -90.0651015,
+  lat: 30.365515,
+  lng: -90.0655351,
 } as const;
 
 export const MAPS_HREF =
   "https://www.google.com/maps/search/?api=1&query=Saia%27s+Super+Meat+Market+2225+Florida+St+Mandeville+LA+70448";
 
-export const OSM_HREF = "https://www.openstreetmap.org/?mlat=30.3658348&mlon=-90.0651015#map=18/30.36583/-90.06510";
+export const OSM_HREF = "https://www.openstreetmap.org/?mlat=30.365515&mlon=-90.0655351#map=18/30.36552/-90.06554";
+export const OSM_EMBED =
+  "https://www.openstreetmap.org/export/embed.html?bbox=-90.0715,30.3615,-90.0595,30.3695&layer=mapnik&marker=30.365515,-90.0655351";
 
 export const MANAGER = {
   name: "Natalie Lott",
